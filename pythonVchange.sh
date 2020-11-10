@@ -15,7 +15,6 @@ for switch in "$@"; do
 	case $switch in
         -p=*|--pythonversion=*)
         PYTHONVERSION_ARG="${switch#*=}"
-        shift
         ;;
         -h|--help)
         echo -e $USEAGE
