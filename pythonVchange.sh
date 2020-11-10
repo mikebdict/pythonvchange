@@ -1,6 +1,6 @@
 #!/bin/bash
 # Intiate a var for a switch supplied python version
-PYTHONVERSION_ARG=none
+PYTHONVERSION_ARG='none'
 # Help text
 USEAGE="$(basename "$0")\n
 [-h, --help] [-p=, --pythonversion= (pythonversion)]\n\n
@@ -36,7 +36,7 @@ POSSPYV=$( find /usr/bin -maxdepth 1 -type f -name 'python*' |
 POSSPYAR=($POSSPYV)
 
 # Dont run the interactive menu if -p or --pythonversion is provided
-if [[ $SWIPYTHONVERSION == "none" ]]; then
+if [[ $PYTHONVERSION_ARG == 'none' ]]; then
 	echo 'The current python version is' $CURRENTPYV
 	echo 'Do you want to change it?'
 	read -s -n1 -p 'Enter Yes or No' answer
